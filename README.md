@@ -1,2 +1,5 @@
 # lift-ajax-examples
-Examples with the framework Lift and its Ajax magic
+
+
+A Simple web application written in Scala with the Lift Framework to show its Ajax magic.
+It is also included the materializecss framework

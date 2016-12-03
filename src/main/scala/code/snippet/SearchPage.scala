@@ -16,20 +16,18 @@ class SearchPage {
 
   def updateResults(term: String): JsCmd = {
     searchTerm = term
-    println("Updating results")
     searchResults.setHtml
   }
 
   def render() ={
-    "#search-field" #> SHtml.ajaxText(searchTerm, updateResults)
+    "#search-field" #> SHtml.ajaxText(searchTerm, updateResults) &
+    "#results" #> searchResults
   }
 }
 
 class Results  {
+
   def render() = {
-
-    println("Re rendering")
-
     "ul *" #> (1 to randomInt(10)).map(i => "li *" #> i)
   }
 }
